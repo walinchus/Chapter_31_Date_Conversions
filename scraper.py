@@ -21,7 +21,8 @@ xlbin = scraperwiki.scrape(XLS)
 #use the open_workbook function on that new variable to create another
 book = xlrd.open_workbook(file_contents=xlbin)
 sheetstotal = book.nsheets
-
+#the .nsheets method tells us how many sheets 'book' has
+print "nsheets result: ", book.nsheets
 id = 0
 sheetsrange = range(0,sheetstotal)
 for sheetnum in sheetsrange:
